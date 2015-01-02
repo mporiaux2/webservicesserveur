@@ -2,6 +2,7 @@ package magasin.modele;
 
 import java.sql.*;
 import java.util.*;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * classe de mappage poo-relationnel comporte
@@ -9,6 +10,8 @@ import java.util.*;
  * @version 1.0
  * @see Comporte
  */
+
+@XmlRootElement(name="comporte")
 public class ComporteDB extends Comporte{
 
   /**
@@ -150,9 +153,11 @@ public class ComporteDB extends Comporte{
                 float pa=rs.getFloat(5);
 	     	plusieurs.add(new ComporteDB(idcomporte,fkcomfact,fkproduit,quantite,pa));
 	      }
-	   
+	    return plusieurs;
+            //ligne suivante désactivée car génère exceptions quand commande vide
+            /*
               if(!trouve)throw new Exception("numéro de commande inconnu");
-              else return plusieurs;
+              else return plusieurs;*/
 	     }
 	     catch(Exception e){
 		

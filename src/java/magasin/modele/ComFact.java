@@ -95,7 +95,7 @@ public class ComFact {
  * @return identifiant du client passant la commande
  */
   
-    public int getFkClient() {
+    public int getFkclient() {
         return fkclient;
     }
 /**

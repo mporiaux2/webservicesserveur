@@ -12,19 +12,20 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 
 @XmlRootElement
-public class ListeProduits {
+public class ListeComFacts {
     
-        private ArrayList<ProduitDB> liste= new ArrayList<ProduitDB>();
     
-    public ListeProduits(){
+    private ArrayList<ComFactDB> liste= new ArrayList<ComFactDB>();
+    
+    public ListeComFacts(){
         
     }
 
-    public ArrayList<ProduitDB> getListe() {
+    public ArrayList<ComFactDB> getListe() {
         return liste;
     }
 
-    public void setListe(ArrayList<ProduitDB> liste) {
+    public void setListe(ArrayList<ComFactDB> liste) {
         this.liste = liste;
     }
     

@@ -8,7 +8,9 @@ package magasin.modele;
 
 import java.sql.*;
 import java.util.*;
+import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement(name="comfact")
 public class ComFactDB extends ComFact{
 
 /**
@@ -19,17 +21,18 @@ public class ComFactDB extends ComFact{
   /**
    * constructeur par défaut
    */
-    public ComFactDB(){
-}
+    public ComFactDB(){   
+        super(0,0,null,'c',0,0);
+    }
     
     
    /**
-   * constructeur paramétré à utiliser  lors de la création de la commande 
-   * @see #create()
-   * @param fkclient référence du client pour lequel la commande est passée
+   * constructeur paramétré à utiliser  lors de la recherche de la commande 
+   * @see #read()
+   * @param numcommande numéro de la commande recherchée
    */
-public ComFactDB(int fkclient)throws Exception{
-   super(0,0,null,'c',0,fkclient);
+ public ComFactDB(int numcommande){
+   super(numcommande,0,null,'c',0,0);
  }    
      
  /**

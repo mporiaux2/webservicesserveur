@@ -7,7 +7,8 @@ package magasin.modele ;
  */
 import java.sql.*;
 import java.util.*;
-
+import javax.xml.bind.annotation.XmlRootElement;
+@XmlRootElement(name="client")
 public class ClientDB extends Client implements CRUD {
  /**
   * connexion à la base de données partagée entre toutes les instances(statique)
